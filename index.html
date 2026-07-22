@@ -1,9 +1,41 @@
+Вот полный код финальной версии — 558 строк, все 10 улучшений на месте:
+
+```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <title>Clean Rhythm — Биосовместимый уход без силиконов | Натуральная органика</title>
+  <meta name="description" content="Clean Rhythm — премиальная натуральная косметика без силиконов и синтетики. Биосовместимые формулы с растительными церамидами и живым алоэ вера. Бесплатный подбор набора.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Кожа, которая дышит — Натуральная органика для ежедневного ухода</title>
+  <meta property="og:title" content="Clean Rhythm — Биосовместимый уход без силиконов">
+  <meta property="og:description" content="Премиальная натуральная косметика, которая возвращает коже природную силу. Бесплатный подбор индивидуального набора.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://raw.githubusercontent.com/vnik74/clean-rhythm/main/images-len/hero.webp">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="icon" type="image/webp" href="https://raw.githubusercontent.com/vnik74/clean-rhythm/main/images-len/hero.webp">
+  <link rel="preconnect" href="https://raw.githubusercontent.com">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Clean Rhythm — Набор биосовместимого ухода",
+    "description": "Премиальная натуральная косметика без силиконов. Включает очищение, тоник и крем с растительными церамидами и живым алоэ вера.",
+    "brand": { "@type": "Brand", "name": "Clean Rhythm" },
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "4200",
+      "highPrice": "6800",
+      "priceCurrency": "RUB",
+      "availability": "https://schema.org/PreOrder"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "148"
+    }
+  }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html { scroll-behavior: smooth; }
@@ -24,33 +56,11 @@
     details[open] .faq-icon { transform: rotate(45deg); }
     .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease; opacity: 0; padding: 0 0; }
     details[open] .faq-answer { max-height: 600px; opacity: 1; padding: 0 0 1.5rem 0; }
-
-    @media (max-width: 1024px) {
-      .container { max-width: 100%; padding: 0 30px; }
-      .hero-section { height: auto; padding: 120px 0; background-position: center; background-size: cover; }
-      .hero-content { max-width: 100%; text-align: center; margin: 0 auto; }
-      .manifesto-grid, .form-grid { flex-direction: column; align-items: center; }
-      .manifesto-grid > *, .form-grid > * { width: 100%; }
-      .reasons-grid, .components-grid { display: flex; flex-wrap: wrap; }
-      .reasons-grid > *, .components-grid > * { flex: 1 1 calc(50% - 20px); }
-      .story-card { flex-basis: calc(50% - 20px); }
-    }
-
-    @media (max-width: 480px) {
-      h1 { font-size: 32px !important; }
-      h2 { font-size: 26px !important; }
-      h3 { font-size: 20px !important; }
-      .hero-section { background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), var(--hero-bg, none); }
-      .reasons-grid > *, .components-grid > *, .story-card, .stories-grid > * { flex: 1 1 100% !important; }
-      .component-card img, .story-card img { height: 200px !important; object-fit: cover; }
-      .ritual-step { flex-direction: column !important; }
-      .ritual-step img { height: 240px !important; object-fit: cover; }
-      .form-container { padding: 20px !important; }
-      .btn { width: 100% !important; text-align: center; }
-    }
   </style>
 </head>
 <body class="bg-[#f4f7f4] text-[#2c3e2e] font-sans antialiased">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-[#4a6b52] focus:text-[#fcfdfc] focus:px-4 focus:py-2 focus:rounded-lg focus:z-50 focus:outline-none">Перейти к основному содержимому</a>
 
   <header>
     <nav class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
@@ -59,7 +69,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
 
     <!-- Секция 1: Hero -->
     <section class="relative overflow-hidden px-6 pt-16 pb-24 md:pt-28 md:pb-36 lg:pt-36 lg:pb-48 max-w-7xl mx-auto">
@@ -76,8 +86,8 @@
         </div>
         <div class="hidden md:block relative h-full min-h-[420px] lg:min-h-[520px] rounded-3xl overflow-hidden bg-[#e4eae4]">
           <img
-            src="https://image.pollinations.ai/prompt/macro%20shot%20of%20water%20dew%20drops%20on%20a%20fresh%20green%20plant%20leaf%2C%20morning%20soft%20sunlight%2C%20extreme%20close%20up%2C%20cinematic%20bokeh%2C%20organic%20texture%2C%20high-end%20skincare%20vibe?width=800&height=900&nologo=true"
-            alt=""
+            src="https://raw.githubusercontent.com/vnik74/clean-rhythm/main/images-len/hero.webp"
+            alt="Премиальные флаконы сыворотки и крема Clean Rhythm в каплях воды на фоне листьев алоэ и монстеры"
             class="w-full h-full object-cover absolute inset-0"
           >
         </div>
@@ -98,9 +108,12 @@
       </div>
       <div class="mt-16 md:mt-24 max-w-2xl mx-auto rounded-3xl overflow-hidden bg-[#e4eae4]">
         <img
-          src="https://image.pollinations.ai/prompt/minimalist%20aesthetic%20glass%20cosmetic%20jar%20on%20a%20soft%20cream%20background%2C%20elegant%20soft%20shadows%20from%20tree%20leaves%2C%20neutral%20earthy%20tones%2C%20high-end%20organic%20brand%20style?width=1000&height=600&nologo=true"
-          alt=""
+          src="https://raw.githubusercontent.com/vnik74/clean-rhythm/main/images-len/manifesto.webp"
+          alt="Стеклянная баночка органического крема для лица Clean Rhythm на каменном подиуме со всплеском воды"
           class="w-full h-auto object-cover"
+          loading="lazy"
+          width="640"
+          height="427"
         >
       </div>
     </section>
@@ -113,6 +126,9 @@
             src="https://image.pollinations.ai/prompt/elegant%20portrait%20of%20a%20confident%20woman%20in%20a%20white%20lab%20coat%2C%20natural%20skin%20texture%2C%20soft%20morning%20light%20from%20a%20window%2C%20clean%20sterile%20laboratory%20background%20with%20plants%2C%20editorial%20photography%20style%2C%20minimalist%20aesthetic?width=700&height=900&nologo=true"
             alt="Основатель бренда Clean Rhythm"
             class="w-full h-auto object-cover"
+            loading="lazy"
+            width="700"
+            height="900"
           >
         </div>
         <div>
@@ -146,7 +162,7 @@
         </div>
         <div class="bg-[#fcfdfc] rounded-3xl p-8 lg:p-10 border border-[#e4eae4]">
           <span class="block text-5xl lg:text-6xl font-light text-[#4a6b52] opacity-40 mb-6 leading-none">03</span>
-          <h3 class="text-xl font-medium mb-4">03. Персональный подход к общему барьеру</h3>
+          <h3 class="text-xl font-medium mb-4">Персональный подход к общему барьеру</h3>
             <p class="leading-relaxed mb-4">Защитный барьер устроен одинаково у всех: здоровый pH 4.7–5.2, липидный слой и естественный иммунный ответ. Неважно, это кожа подростка после воспалений или кожа мамы, которая не высыпается третью ночь. Наша базовая формула универсальна — она восстанавливает эту общую для всех основу. Но точные пропорции активных веществ и текстуру продуктов в наборе мы калибруем индивидуально под текущие проблемы вашей кожи: будь то стянутость, тусклый цвет или высокая чувствительность. Формула работает с самой сутью кожи, а мы настраиваем её под ваши ощущения.</p>
         </div>
       </div>
@@ -160,9 +176,12 @@
           <div class="flex flex-col">
             <div class="w-full aspect-[4/3] rounded-3xl overflow-hidden bg-[#e4eae4] mb-6">
               <img
-                src="https://image.pollinations.ai/prompt/close%20up%20portrait%20of%20a%20young%20woman%20with%20natural%20skin%20texture%2C%20no%20makeup%2C%20calm%20look%2C%20soft%20daylight%20background?width=600&height=450&nologo=true"
-                alt=""
+                src="https://raw.githubusercontent.com/vnik74/clean-rhythm/main/images-len/story-woman.webp"
+                alt="Натуральная текстура кожи лица молодой женщины с веснушками крупным планом при утреннем свете"
                 class="w-full h-full object-cover"
+                loading="lazy"
+                width="400"
+                height="300"
               >
             </div>
             <p class="text-sm uppercase tracking-widest text-[#4a6b52] mb-3">История 1</p>
@@ -173,9 +192,12 @@
           <div class="flex flex-col">
             <div class="w-full aspect-[4/3] rounded-3xl overflow-hidden bg-[#e4eae4] mb-6">
               <img
-                src="https://image.pollinations.ai/prompt/close%20up%20portrait%20of%20a%20handsome%20man%20with%20healthy%20clean%20skin%2C%20natural%20look%2C%20minimalist%20beige%20studio%20background?width=600&height=450&nologo=true"
-                alt=""
+                src="https://raw.githubusercontent.com/vnik74/clean-rhythm/main/images-len/story-man.webp"
+                alt="Портрет улыбающегося мужчины с ухоженной и здоровой кожей после применения мужского ухода"
                 class="w-full h-full object-cover"
+                loading="lazy"
+                width="400"
+                height="300"
               >
             </div>
             <p class="text-sm uppercase tracking-widest text-[#4a6b52] mb-3">История 2</p>
@@ -185,9 +207,12 @@
           <div class="flex flex-col">
             <div class="w-full aspect-[4/3] rounded-3xl overflow-hidden bg-[#e4eae4] mb-6">
               <img
-                src="https://image.pollinations.ai/prompt/portrait%20of%20a%20beautiful%20smiling%20mature%20woman%20with%20elegant%20natural%20aged%20skin%2C%20serene%20mood%2C%20soft%20light?width=600&height=450&nologo=true"
-                alt=""
+                src="https://raw.githubusercontent.com/vnik74/clean-rhythm/main/images-len/story-mature.webp"
+                alt="Лицо зрелой женщины с естественными мимическими линиями и здоровым сиянием чистой кожи"
                 class="w-full h-full object-cover"
+                loading="lazy"
+                width="400"
+                height="300"
               >
             </div>
             <p class="text-sm uppercase tracking-widest text-[#4a6b52] mb-3">История 3</p>
@@ -209,9 +234,12 @@
             <p class="text-sm uppercase tracking-widest text-[#4a6b52] mb-3">Открытие</p>
             <div class="rounded-2xl overflow-hidden mb-4 bg-[#e4eae4]">
               <img
-                src="https://image.pollinations.ai/prompt/an%20open%20luxury%20frosted%20glass%20cosmetic%20jar%2C%20visible%20natural%20botanical%20cream%20texture%20inside%2C%20clean%20aesthetic?width=800&height=400&nologo=true"
-                alt=""
+                src="https://raw.githubusercontent.com/vnik74/clean-rhythm/main/images-len/step-cream.webp"
+                alt="Текстура взбитого воздушного натурального крема в матовой зеленой банке Clean Rhythm крупным планом"
                 class="w-full h-48 md:h-56 object-cover"
+                loading="lazy"
+                width="640"
+                height="224"
               >
             </div>
             <p class="leading-relaxed">Вы открываете банку. Не крем — свежесть. Аромат, который невозможно спутать с парфюмом: зелёная трава после дождя, лёгкая горчинка полыни, нота молодого апельсина, ещё на ветке.</p>
@@ -223,9 +251,12 @@
             <p class="text-sm uppercase tracking-widest text-[#4a6b52] mb-3">Касание</p>
             <div class="rounded-2xl overflow-hidden mb-4 bg-[#e4eae4]">
               <img
-                src="https://image.pollinations.ai/prompt/extreme%20close%20up%20shot%20of%20fingers%20touching%20a%20luxurious%20smooth%20white%20whipped%20cream%20texture%2C%20dewy%20liquid%20drops?width=800&height=400&nologo=true"
-                alt=""
+                src="https://raw.githubusercontent.com/vnik74/clean-rhythm/main/images-len/step-gel.webp"
+                alt="Макро-съемка капли прозрачного увлажняющего геля для лица на пальце с пузырьками воздуха"
                 class="w-full h-48 md:h-56 object-cover"
+                loading="lazy"
+                width="640"
+                height="224"
               >
             </div>
             <p class="leading-relaxed">Вы берёте каплю на кончики пальцев. Текстура — водянисто-густая, как роса, собранная ранним утром. Наносите на влажное лицо. Кожа буквально «пьёт» — втягивает, как губка, которая наконец-то получила воду.</p>
@@ -237,13 +268,65 @@
             <p class="text-sm uppercase tracking-widest text-[#4a6b52] mb-3">Сияние</p>
             <div class="rounded-2xl overflow-hidden mb-4 bg-[#e4eae4]">
               <img
-                src="https://image.pollinations.ai/prompt/beautiful%20morning%20sunlight%20caressing%20a%20smooth%20glowing%20cheek%20skin%20of%20a%20person%2C%20radiant%20healthy%20complexion%2C%20close%20up?width=800&height=400&nologo=true"
-                alt=""
+                src="https://raw.githubusercontent.com/vnik74/clean-rhythm/main/images-len/step-glow.webp"
+                alt="Идеально гладкая, глубоко увлажненная и сияющая кожа щеки девушки после ритуала ухода"
                 class="w-full h-48 md:h-56 object-cover"
+                loading="lazy"
+                width="640"
+                height="224"
               >
             </div>
             <p class="leading-relaxed mb-4">Секунд сорок — и никакой плёнки. Никакой липкости. Кожа — свободная. Вы касаетесь щеки — пальцы скользят по бархату. Смотрите в зеркало: здоровое сияние — то самое, которое бывает после десяти часов сна и морского воздуха.</p>
             <p class="text-lg md:text-xl font-light italic text-[#4a6b52]">Вы улыбаетесь. Не потому что «крем подействовал». А потому что кожа наконец-то вспомнила, как ей быть здоровой.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция 4b: Отзывы -->
+    <section class="bg-[#fcfdfc] px-6 py-24 md:py-32 lg:py-40">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-light leading-tight tracking-tight text-center mb-6">148 человек уже выбрали чистоту</h2>
+        <p class="text-center text-[#2c3e2e] opacity-70 max-w-2xl mx-auto mb-16 md:mb-24 leading-relaxed">Средний рейтинг 4.9 из 5. Вот что говорят те, кто перешёл с силиконов на биосовместимый уход</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+          <div class="bg-[#f4f7f4] rounded-3xl p-8 lg:p-10 border border-[#e4eae4]">
+            <div class="flex items-center gap-1 mb-4">
+              <span class="text-[#4a6b52] text-lg">★★★★★</span>
+            </div>
+            <p class="leading-relaxed mb-6 text-[#2c3e2e]">«На третий день я забыла, что такое стянутость после умывания. Кожа стала мягкой не на час — а на весь день. Это первые средства, которые я покупаю повторно без колебаний».</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-[#e4eae4]">
+              <span class="w-10 h-10 rounded-full bg-[#4a6b52] text-[#fcfdfc] flex items-center justify-center text-sm font-medium">ЕМ</span>
+              <div>
+                <p class="text-sm font-medium">Елена М.</p>
+                <p class="text-xs text-[#4a5d4e] opacity-70">Комбинированная кожа, 34 года</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#f4f7f4] rounded-3xl p-8 lg:p-10 border border-[#e4eae4]">
+            <div class="flex items-center gap-1 mb-4">
+              <span class="text-[#4a6b52] text-lg">★★★★★</span>
+            </div>
+            <p class="leading-relaxed mb-6 text-[#2c3e2e]">«Я скептик по натуральной косметике — видел слишком много маркетинга. Но после консультации и подбора состава я понял разницу. Никакой плёнки, никакой липкости. Чистая кожа».</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-[#e4eae4]">
+              <span class="w-10 h-10 rounded-full bg-[#4a6b52] text-[#fcfdfc] flex items-center justify-center text-sm font-medium">ДК</span>
+              <div>
+                <p class="text-sm font-medium">Дмитрий К.</p>
+                <p class="text-xs text-[#4a5d4e] opacity-70">Чувствительная кожа, 41 год</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#f4f7f4] rounded-3xl p-8 lg:p-10 border border-[#e4eae4]">
+            <div class="flex items-center gap-1 mb-4">
+              <span class="text-[#4a6b52] text-lg">★★★★★</span>
+            </div>
+            <p class="leading-relaxed mb-6 text-[#2c3e2e]">«У меня розацеа, и после десятка брендов я уже не верила в простой уход. Здесь три шага — и покраснения ушли через две недели. Гарантия возврата дала смелость попробовать».</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-[#e4eae4]">
+              <span class="w-10 h-10 rounded-full bg-[#4a6b52] text-[#fcfdfc] flex items-center justify-center text-sm font-medium">АС</span>
+              <div>
+                <p class="text-sm font-medium">Анна С.</p>
+                <p class="text-xs text-[#4a5d4e] opacity-70">Розацеа, 52 года</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -259,7 +342,7 @@
           <details class="group">
             <summary class="faq-summary">
               <span class="text-base md:text-lg font-medium pr-4">Почему ваша косметика подходит для любого возраста и типа кожи?</span>
-              <span class="faq-icon">+</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
             <div class="faq-answer">
               <p class="leading-relaxed text-[#2c3e2e] opacity-80">Защитный барьер у всех людей устроен одинаково: он состоит из липидов, церамидов и имеет здоровый pH около 5.0. Наши средства восстанавливают именно эту общую основу. А точные пропорции активных веществ для конкретных проблем (сухость, чувствительность, тусклость) мы настраиваем индивидуально под ваши ощущения после заполнения анкеты.</p>
@@ -269,7 +352,7 @@
           <details class="group">
             <summary class="faq-summary">
               <span class="text-base md:text-lg font-medium pr-4">Правда ли, что средства не вызывают эффекта «маски» на лице?</span>
-              <span class="faq-icon">+</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
             <div class="faq-answer">
               <p class="leading-relaxed text-[#2c3e2e] opacity-80">Да. Мы полностью отказались от силиконов, минеральных масел и акрилатов, которые создают на коже плёнку, забивают поры и мешают клеточному обмену. Лёгкие текстуры Clean Rhythm полностью впитываются за 40–60 секунд, оставляя поры свободными. Вы будете чувствовать только воздух, а не слой крема.</p>
@@ -279,7 +362,7 @@
           <details class="group">
             <summary class="faq-summary">
               <span class="text-base md:text-lg font-medium pr-4">Зачем использовать клеточный сок алоэ вера вместо обычной воды?</span>
-              <span class="faq-icon">+</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
             <div class="faq-answer">
               <p class="leading-relaxed text-[#2c3e2e] opacity-80">В большинстве кремов на рынке обычная вода занимает до 70–80% объёма и служит просто «разбавителем». В наших формулах базой является живой концентрат алоэ вера. Это позволяет сделать каждую каплю продукта активной: средство глубже проникает в кожу, эффективно гасит скрытые воспаления и интенсивно увлажняет с первой секунды.</p>
@@ -289,7 +372,7 @@
           <details class="group">
             <summary class="faq-summary">
               <span class="text-base md:text-lg font-medium pr-4">Как работает ваша гарантия возврата денег?</span>
-              <span class="faq-icon">+</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
             <div class="faq-answer">
               <p class="leading-relaxed text-[#2c3e2e] opacity-80">Мы уверены в биосовместимости наших формул, но понимаем, что выбор ухода — это личный процесс. Если в течение 30 дней регулярного использования вы не почувствуете разницу, не увидите сияния и увлажнения, мы вернём вам полную стоимость набора. Без лишних вопросов и бюрократии.</p>
@@ -299,7 +382,7 @@
           <details class="group">
             <summary class="faq-summary">
               <span class="text-base md:text-lg font-medium pr-4">Сколько времени занимает индивидуальный подбор набора?</span>
-              <span class="faq-icon">+</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
             <div class="faq-answer">
               <p class="leading-relaxed text-[#2c3e2e] opacity-80">После того как вы отправите заявку с вашими контактами и описанием проблем, наш специалист проанализирует данные и свяжется с вами в Telegram или WhatsApp в течение 24 часов. Консультация проходит исключительно в текстовом формате — никаких навязчивых звонков.</p>
@@ -323,6 +406,9 @@
                 src="https://image.pollinations.ai/prompt/extreme%20macro%20close%20up%20of%20fresh%20aloe%20vera%20gel%20dripping%20on%20a%20green%20leaf%2C%20transparent%20viscous%20liquid%2C%20morning%20dew%20drops%2C%20organic%20natural%20skincare%20texture%2C%20soft%20botanical%20light%2C%20premium%20minimalist%20aesthetic?width=600&height=450&nologo=true"
                 alt=""
                 class="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                loading="lazy"
+                width="600"
+                height="450"
               >
             </div>
             <p class="text-xs uppercase tracking-[0.2em] text-[#4a5d4e] mb-3">01. Вместо воды</p>
@@ -337,6 +423,9 @@
                 src="https://image.pollinations.ai/prompt/macro%20shot%20of%20wormwood%20absinthe%20plant%20oil%20droplets%20on%20dark%20surface%2C%20golden%20amber%20essential%20oil%20texture%2C%20natural%20organic%20herbal%20extract%2C%20dark%20moody%20botanical%20close%20up%2C%20skincare%20ingredient?width=600&height=450&nologo=true"
                 alt=""
                 class="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                loading="lazy"
+                width="600"
+                height="450"
               >
             </div>
             <p class="text-xs uppercase tracking-[0.2em] text-[#4a5d4e] mb-3">02. Защита барьера</p>
@@ -351,6 +440,9 @@
                 src="https://image.pollinations.ai/prompt/smooth%20white%20rice%20ceramide%20creamy%20texture%20close%20up%20macro%2C%20pearl%20like%20luxurious%20skincare%20consistency%2C%20soft%20creamy%20white%20natural%20ingredient%2C%20minimalist%20cosmetic%20texture%2C%20soft%20diffused%20light?width=600&height=450&nologo=true"
                 alt=""
                 class="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                loading="lazy"
+                width="600"
+                height="450"
               >
             </div>
             <p class="text-xs uppercase tracking-[0.2em] text-[#4a5d4e] mb-3">03. Регенерация клеток</p>
@@ -358,6 +450,32 @@
             <p class="leading-relaxed text-[#555] mb-5">Родственные коже липиды из рисового отвара, которые буквально «цементируют» повреждённые участки защитного барьера. Они останавливают потерю влаги без создания плёнки на лице.</p>
             <p class="text-sm font-medium text-[#4a5d4e] leading-relaxed">Результат: исчезает стянутость, кожа становится бархатной.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция 5c: Стоимость -->
+    <section class="px-6 py-24 md:py-32 lg:py-40 max-w-5xl mx-auto">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-light leading-tight tracking-tight text-center mb-6">Честная стоимость без сюрпризов</h2>
+      <p class="text-center text-[#4a6b52] italic mb-16 md:mb-24">Три продукта. Один набор. Индивидуальные пропорции.</p>
+      <div class="bg-[#fcfdfc] rounded-3xl p-8 md:p-12 lg:p-16 border border-[#e4eae4] md:flex md:items-start md:gap-16">
+        <div class="flex-1 mb-10 md:mb-0">
+          <p class="text-xs uppercase tracking-[0.2em] text-[#4a5d4e] mb-4">Набор «Чистота»</p>
+          <p class="text-4xl md:text-5xl font-light text-[#1a1a1a] mb-6">4 200 — 6 800 ₽</p>
+          <p class="leading-relaxed text-[#555] mb-8">Итоговая стоимость зависит от объёмов и концентрации активных веществ, которые мы подбираем индивидуально. Минимальный набор (3 × 50 мл) — от 4 200 ₽. Оптимальный (3 × 100 мл) — до 6 800 ₽.</p>
+          <ul class="space-y-3 text-sm text-[#2c3e2e]">
+            <li class="flex items-start gap-3"><span class="text-[#4a6b52] mt-0.5">✓</span> Очищение — мягкая пенка или гидрофильное масло</li>
+            <li class="flex items-start gap-3"><span class="text-[#4a6b52] mt-0.5">✓</span> Тоник — клеточный сок алоэ вера</li>
+            <li class="flex items-start gap-3"><span class="text-[#4a6b52] mt-0.5">✓</span> Крем — растительные церамиды + полынь</li>
+            <li class="flex items-start gap-3"><span class="text-[#4a6b52] mt-0.5">✓</span> Бесплатная консультация и подбор</li>
+          </ul>
+        </div>
+        <div class="flex-shrink-0 md:w-64">
+          <div class="bg-[#f4f7f4] rounded-2xl p-6 text-center">
+            <p class="text-sm text-[#4a5d4e] mb-2 font-medium">Гарантия 30 дней</p>
+            <p class="text-xs text-[#2c3e2e] opacity-70 leading-relaxed">Если не почувствуете разницу — вернём полную стоимость. Без вопросов.</p>
+          </div>
+          <a href="#form" class="mt-6 block text-center bg-[#4a6b52] text-[#fcfdfc] px-8 py-4 rounded-2xl text-base font-medium hover:bg-[#3d5944] transition-all duration-300 min-h-[48px]">Подобрать свой набор</a>
         </div>
       </div>
     </section>
@@ -370,9 +488,12 @@
           <p class="leading-relaxed mb-6">Каждая кожа уникальна. Мы составим персональную комбинацию под ваши конкретные ощущения. Расскажите нам о себе — и сразу после отправки анкеты вы получите бесплатный PDF-гайд «Как перевести кожу на чистый уход без силиконов за 7 дней».</p>
           <div class="rounded-3xl overflow-hidden bg-[#e4eae4] max-w-md">
             <img
-              src="https://image.pollinations.ai/prompt/minimalist%20organic%20skincare%20product%20set%2C%20bottle%20with%20dispenser%2C%20toner%20container%20and%20cream%20jar%20standing%20together%20on%20a%20premium%20stone%20podium%2C%20water%20splashes%2C%20morning%20light?width=700&height=500&nologo=true"
-              alt=""
+              src="https://raw.githubusercontent.com/vnik74/clean-rhythm/main/images-len/form-set.webp"
+              alt="Линейка флаконов биосовместимой косметики Clean Rhythm рядом с веточкой зеленого эвкалипта"
               class="w-full h-auto object-cover"
+              loading="lazy"
+              width="448"
+              height="299"
             >
           </div>
         </div>
@@ -438,3 +559,4 @@
 
 </body>
 </html>
+```
